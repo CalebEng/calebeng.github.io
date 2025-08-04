@@ -1,14 +1,14 @@
 @font-face{
     font-family: 'Interceptor';
-    src: url('../fonts/Interceptor.otf') format('opentype');
+    src: url('fonts/Interceptor.otf') format('opentype');
 }
 @font-face{
     font-family: 'Interceptor';
-    src: url('../fonts/Interceptor\ Italic.otf') format('opentype');
+    src: url('fonts/Interceptor\ Italic.otf') format('opentype');
 }
 @font-face{
     font-family: 'Interceptor';
-    src: url('../fonts/Interceptor\ Bold.otf') format('opentype');
+    src: url('fonts/Interceptor\ Bold.otf') format('opentype');
 }
 body{
     font-family: 'Interceptor',sans-serif;
