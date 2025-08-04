@@ -1,6 +1,20 @@
+@font-face{
+    font-family: 'Interceptor';
+    src: url('../fonts/Interceptor.otf') format('opentype');
+}
+@font-face{
+    font-family: 'Interceptor';
+    src: url('../fonts/Interceptor\ Italic.otf') format('opentype');
+}
+@font-face{
+    font-family: 'Interceptor';
+    src: url('../fonts/Interceptor\ Bold.otf') format('opentype');
+}
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Interceptor',sans-serif;
+    font-weight: 400;
     margin: 0;
+    font-size:20px;
     background-color: #cfcfcf;
 }
 
