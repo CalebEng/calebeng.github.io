@@ -1,5 +1,14 @@
+@font-face{
+    font-family: 'Interceptor';
+    src: url('../fonts/Interceptor.otf') format('opentype');
+}
 #time{
+    font-family: 'Interceptor',sans-serif;
+    display:flex;
+    font-style: italic;
+    justify-content: center;
     align-items: center;
     padding: 20px 20px;
-    font-size:large;
+    font-size: 80px;
+    height: 90vh;
 }
