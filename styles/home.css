@@ -63,13 +63,3 @@ body{
     background-color: #cfcfcf;
 }
 
-footer{
-    position: fixed;
-    left:0;
-    bottom:0;
-    width:100%;
-    align-items: center;
-    height:40px;
-    background-color: steelblue;
-    color: black;
-}

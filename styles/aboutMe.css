@@ -1,0 +1,30 @@
+#pro{
+    width:210px;
+    height:210px;
+    overflow: hidden;
+    border:2px solid;
+    border-radius: 50%;
+}
+
+#profile{
+    width: 100%;
+    height: auto;
+    border:1px;
+    object-fit: cover;
+    object-position: top center;
+}
+#mainText{
+    width: 45vw;
+    height: auto;
+    background: rgb(237, 237, 237);
+    border: 1px solid grey;
+    margin: 10px;
+    padding: 30px;
+}
+
+#aboutContainer{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
