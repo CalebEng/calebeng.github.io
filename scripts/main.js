@@ -1,6 +1,7 @@
 let timeInterval;
 
 let slideIndex = 0;
+let slideshowTimer = null;
 
 
 function load(page){
@@ -9,6 +10,11 @@ function load(page){
     .then(html => {
         if(timeInterval){
             clearInterval(timeInterval);
+        }
+        if (slideshowTimer) {
+            clearTimeout(slideshowTimer);
+            slideshowTimer = null;
+            slideIndex = 0; 
         }
 
         document.getElementById('content').innerHTML = html;
@@ -51,5 +57,7 @@ function showSlides(n){
         slideIndex=1;
     }
     slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides,3000);
+
+    clearTimeout(slideshowTimer);
+    slideshowTimer = setTimeout(showSlides, 3000);
 }
