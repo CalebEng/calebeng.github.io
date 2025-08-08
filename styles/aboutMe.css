@@ -1,3 +1,15 @@
+@font-face{
+    font-family: 'Interceptor';
+    src: url('../fonts/Interceptor.otf') format('opentype');
+}
+@font-face{
+    font-family: 'Interceptor';
+    src: url('../fonts/Interceptor\ Italic.otf') format('opentype');
+}
+@font-face{
+    font-family: 'Interceptor';
+    src: url('../fonts/Interceptor\ Bold.otf') format('opentype');
+}
 #pro{
     width:210px;
     height:210px;
@@ -20,11 +32,44 @@
     border: 1px solid grey;
     margin: 10px;
     padding: 30px;
+    font-size:18px;
 }
-
+#secondary{
+    width: 45vw;
+    height: auto;
+    background: rgb(237, 237, 237);
+    border: 1px solid grey;
+    margin: 10px;
+    padding: 30px;
+    font-size:18px; 
+}
 #aboutContainer{
     display: flex;
-    align-items: center;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 10px;
     padding: 20px;
+}
+#textcontainer{
+    display:flex;
+    flex-direction: column;
+}
+.slideshowContainer {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+.slides{
+    display:none;
+}
+.slideshow{
+    width:auto;
+    height:550px;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }

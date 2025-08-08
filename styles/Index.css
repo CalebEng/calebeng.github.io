@@ -11,7 +11,6 @@
     src: url('../fonts/Interceptor\ Bold.otf') format('opentype');
 }
 body{
-    font-family: 'Interceptor',sans-serif;
     font-weight: 400;
     margin: 0;
     font-size:20px;
