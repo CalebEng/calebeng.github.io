@@ -16,6 +16,9 @@ function load(page){
             displayTime();
             timeInterval = setInterval(displayTime, 1000)
         }
+        if(page ==="aboutMe"){
+            showSlides();
+        }
     })
     .catch(()=> {
         document.getElementById('content').innerHTML ="<p>Page not found.</p>";
