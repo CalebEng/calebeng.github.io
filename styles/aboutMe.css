@@ -16,6 +16,7 @@
     overflow: hidden;
     border:2px solid;
     border-radius: 50%;
+    flex-shrink: 0;
 }
 
 #profile{
@@ -48,30 +49,38 @@
     align-items: flex-start;
     gap: 10px;
     padding: 20px;
+    flex-wrap: wrap;
 }
 #textcontainer{
     display:flex;
     flex-direction: column;
+    min-width: 300px;
 }
 .slideshowContainer {
-  max-width: 500px;
-  position: top center;
-  margin: auto;
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
 }
 .slides{
     display:none;
+    position: relative;
+    text-align:center
 }
 .slideshow{
     width:auto;
     height:550px;
+    object-fit:cover;
 }
 
 .numberText {
-  color: #000000;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+    position: absolute;
+    color: #000000;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
 
 hr{
