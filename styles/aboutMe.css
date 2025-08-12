@@ -25,7 +25,7 @@
     object-fit: cover;
     object-position: top center;
 }
-#mainText{
+.mainText{
     width: 45vw;
     height: auto;
     background: rgb(237, 237, 237);
@@ -67,9 +67,25 @@
 }
 
 .numberText {
-  color: #f2f2f2;
+  color: #000000;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
+}
+
+hr{
+    border: 1px solid black; 
+    width: 100%; 
+    margin: 20px auto;
+}
+
+a{
+    text-decoration: underline;
+    color:black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+a:hover{
+    background-color: #7e7e7e;
 }
