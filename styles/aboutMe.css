@@ -55,7 +55,7 @@
 }
 .slideshowContainer {
   max-width: 500px;
-  position: relative;
+  position: top center;
   margin: auto;
 }
 .slides{
