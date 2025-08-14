@@ -8,16 +8,64 @@
         <title>Projects</title>
     </head>
 
-    <body>
-        <div id="projectsContainer">
-            <div class="mainText">
-                <h2><a href="https://github.com/CalebEng/Emotion-Detection-CPS-843-Project-" target="_blank" rel="noopener">Emotion Detection Program</a></h2>
-                <h3>CPS-843 (Computer Vision) | Fall 2024</h3>
-            </div>
+    <body onload = "load('projects')">
+        <div id="colContainer">
+            <div class="projectsContainer">
+                <div class ="leftCol">
+                    <div class="mainText">
+                        <h2><a href="https://github.com/CalebEng/Emotion-Detection-CPS-843-Project-" target="_blank" rel="noopener">Emotion Detection Program</a></h2>
+                        <h3>CPS-843 (Computer Vision) | Fall 2024</h3>
+                        <button class="expandBut" data-project="emotion">More Info</button>
+                    </div>
+                    
 
-            <div class="mainText">
-                <h2><a href="https://github.com/CalebEng/Silverlight-bot" target="_blank" rel="noopener">Discord Bot</a></h2>
-                <h3>July 2023 - Present</h3>
+                    <div class="mainText">
+                        <h2><a href="https://github.com/CalebEng/Silverlight-bot" target="_blank" rel="noopener">Discord Bot</a></h2>
+                        <h3>July 2023 - Present</h3>
+                        <button class="expandBut" data-project="discord">More Info</button>
+                    </div>
+                </div>
+            </div>
+            <div class="projectsContainer">
+                <div class = "rightCol hidden"> 
+                    <div class="mainText">
+                        <div class = "projectInfo hidden" data-project="emotion">
+                            <h3>Overview</h3>
+                            <hr>
+                            <p>
+                                Facial Emotion Recognition (FER) uses computational methods to examine and classify human emotions based on facial expressions. 
+                                The project aims to develop an advanced FER application using machine learning techniques, specifically, Convolutional Neural Networks (CNNs), 
+                                to identify seven distinct emotions: anger, disgust, fear, happy, sad, surprise, and neutral. 
+                                The objective was to evaluate the performance of the CNN-based approach in recognizing emotions under various circumstances. 
+                                The model was tested using local system environments as well as Google Colab, achieving an accuracy of 62.71%. Despite challenges 
+                                such as dataset imbalance and computational limitations, these results demonstrate the potential of deep learning in emotion recognition tasks, 
+                                though further tuning and refinement are needed to improve the model’s effectiveness.
+                            </p>
+                            
+                            <h3>Dataset</h3>
+                            <hr>
+                            <p>
+                                The <a href="https://www.kaggle.com/datasets/msambare/fer2013" target="_blank" rel="noopener">FER-2013</a> dataset was used to train our CNN. 
+                                The dataset consists of two main folders, one for testing and one for training. 
+                                The training dataset consists of 28709 examples used to train the model to identify emotions from the following seven facial expressions: 
+                                anger, disgust, fear, happy, sad, surprise, and neutral. However, each emotion in the dataset has varying amounts of data. Anger contains 3589 photos, 
+                                disgust has 436, fear has 4097, happiness has 7215, neutral has 4965, sad has 4830, and surprise has 3171. 
+                                The test data contains 3589 examples that are used to test the model. Collectively, the selected dataset has 56.51 MB of data. 
+                                Each data sample in the FER-2013 dataset is grayscale and the images' dimensionality is 48x48. 
+                                This simplifies the data preprocessing step and ensures that our model can consistently learn and differentiate between emotions. 
+                                Likewise, each data sample is variably unique due to the lighting, facial obstructions, and viewing angles, enabling the model to improve its generalizability.
+                            </p>
+                        </div>
+
+                        <div class="projectInfo hidden" data-project="discord">
+                            <h3>Overview</h3>
+                            <hr>
+                        </div>
+                    </div>
+                    <div id = "test">
+                        <button id = "closeBut" class = "closeBut">X</button>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

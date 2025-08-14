@@ -10,7 +10,7 @@
     font-family: 'Interceptor';
     src: url('../fonts/Interceptor\ Bold.otf') format('opentype');
 }
-#projectsContainer{
+.projectsContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,13 +19,14 @@
 }
 
 .mainText{
-    width: 45vw;
+    width: 40vw;
     height: auto;
     background: rgb(237, 237, 237);
     border: 1px solid grey;
     margin: 10px;
     padding: 30px;
     font-size:18px;
+    align-self: flex-start;
 }
 
 a{
@@ -36,4 +37,39 @@ a{
 }
 a:hover{
     background-color: #7e7e7e;
+}
+#colContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+#colContainer.expanded{
+    flex-direction: row;
+}
+
+.leftCol,
+.rightCol {
+    flex: 1;
+    transition: all 0.3s ease;
+}
+.rightCol{
+    display:flex;
+    flex-direction: row;
+}
+
+.hidden {
+    display: none;
+}
+.closeBut {
+    font-size: 1.2rem;
+    color: #000000;
+    cursor: pointer;
+}
+.closeBut:hover {
+    background: #5c5c5c;
+}
+#test{
+    padding:10px;
 }

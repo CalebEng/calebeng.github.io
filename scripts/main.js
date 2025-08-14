@@ -25,6 +25,9 @@ function load(page){
         if(page ==="aboutMe"){
             showSlides();
         }
+        if(page ==="projects"){
+            setTimeout(setUpPage, 0);
+        }
     })
     .catch(()=> {
         document.getElementById('content').innerHTML ="<p>Page not found.</p>";
@@ -60,4 +63,35 @@ function showSlides(n){
 
     clearTimeout(slideshowTimer);
     slideshowTimer = setTimeout(showSlides, 4500);
+}
+
+
+function setUpPage(){
+    const buttons = document.querySelectorAll(".expandBut");
+    const colContainer = document.getElementById("colContainer");
+    const rightCol = document.querySelector(".rightCol");
+    const allInfo = document.querySelectorAll(".projectInfo");
+
+    buttons.forEach(button =>{
+        button.addEventListener("click", () => {
+            const projectId = button.getAttribute("data-project");
+
+            allInfo.forEach(block => block.classList.add("hidden"));
+
+            const selected = document.querySelector(`.projectInfo[data-project="${projectId}"]`);
+            if(selected){
+                selected.classList.remove("hidden");
+                rightCol.classList.remove("hidden");
+                colContainer.classList.add("expanded")
+            }
+
+            const closeBut = document.getElementById("closeBut");
+            if(closeBut){
+                closeBut.addEventListener("click",() => {
+                    rightCol.classList.add("hidden");
+                    colContainer.classList.remove("expanded");
+                });
+            }
+        });
+    });
 }
