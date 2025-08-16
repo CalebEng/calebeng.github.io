@@ -73,3 +73,9 @@ a:hover{
 #test{
     padding:10px;
 }
+
+#dataContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

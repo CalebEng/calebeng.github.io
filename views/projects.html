@@ -54,12 +54,62 @@
                                 Each data sample in the FER-2013 dataset is grayscale and the images' dimensionality is 48x48. 
                                 This simplifies the data preprocessing step and ensures that our model can consistently learn and differentiate between emotions. 
                                 Likewise, each data sample is variably unique due to the lighting, facial obstructions, and viewing angles, enabling the model to improve its generalizability.
+                                Examples of each emotion:
                             </p>
+
+                            <div id ="dataContainer">
+                                <img id="dataset" src="../images/Data.png" alt = "">
+                            </div>
+
+                            <h3>Results</h3>
+                            <hr>
+                            <p>
+                                At the end of the project 2 models were produced with performance around 60-65% accuracy.
+                                Demo video made by a member of the project is available at: <a href="https://github.com/CalebEng/Emotion-Detection-CPS-843-Project-" target="_blank" rel="noopener">Emotion Detection Program</a>
+                                <br>
+                                <h4>Confusion Matrices:</h4>
+                                <hr>
+                                Local Machine:
+                                <br>
+                                <img id = "localMachine" src="../images/Local.png" alt="">
+                                <br>
+                                Google Colab:
+                                <br>
+                                <img id = "gc" src = "../images/GoogleColab.png" alt = "">
+                            </p>
+                            <p>
+                                <br>
+                                <h4>Classification Report:</h4>
+                                <hr>
+                                <img id = "Classification" src ="../images/classification.png" alt = "">
+                            </p>
+                            
                         </div>
 
                         <div class="projectInfo hidden" data-project="discord">
                             <h3>Overview</h3>
                             <hr>
+                            <p>
+                                The Silverlight discord bot, is an application made in Python that interacts with Discord's api.
+                                Some of the functionalities include: games like TicTacToe and Hangman, prototype poem N-gram model made using TensorFlow,
+                                and reading information/activities from users in the server.
+                                <br>
+                                <h4>Examples:</h4>
+                                <hr>
+                                Typing sl-info [name] will make the bot look for the user specified. If found on the server, the bot will read all the available 
+                                information about the user and return it in a readable form.
+                                <br>
+                                <img src="../images/slinfo.png" alt="">
+                                <br>
+                                Typing sl-song [name] will make the bot look for the user specified. If no name is specified, 
+                                the the bot will look at your information instead.
+                                If found on the server, the bot will see if the user is listening to a song.
+                                If they are, it will display information about the song and allow the user to listen along.
+                                <img src="../images/slsong.png" alt="">
+                                <br>
+                                Using the hangman command will start a game of hangman using a list of 57,521 possible words.
+                                <img src="../images/hangman.png" alt="">
+                            </p>
                         </div>
                     </div>
                     <div id = "test">
