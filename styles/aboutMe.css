@@ -10,6 +10,10 @@
     font-family: 'Interceptor';
     src: url('../fonts/Interceptor\ Bold.otf') format('opentype');
 }
+
+body{
+    font-family: 'Lato', sans-serif;
+}
 #pro{
     width:210px;
     height:210px;

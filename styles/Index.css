@@ -10,6 +10,7 @@
     font-family: 'Interceptor';
     src: url('../fonts/Interceptor\ Bold.otf') format('opentype');
 }
+
 body{
     font-weight: 400;
     margin: 0;
@@ -24,6 +25,8 @@ header{
     padding: 20px 20px;
     background-color: steelblue;
     color: black;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
 }
 
 header .logo img{

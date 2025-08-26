@@ -10,6 +10,9 @@
     font-family: 'Interceptor';
     src: url('../fonts/Interceptor\ Bold.otf') format('opentype');
 }
+body{
+    font-family: 'Lato', sans-serif;
+}
 .projectsContainer{
     display: flex;
     flex-direction: column;
