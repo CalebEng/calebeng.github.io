@@ -28,6 +28,9 @@ function load(page){
         if(page ==="projects"){
             setTimeout(setUpPage, 0);
         }
+        if(page ==="more"){
+            
+        }
     })
     .catch(()=> {
         document.getElementById('content').innerHTML ="<p>Page not found.</p>";
