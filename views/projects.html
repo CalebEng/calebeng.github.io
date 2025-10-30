@@ -26,6 +26,12 @@
                         <h3>July 2023 - Present</h3>
                         <button class="expandBut" data-project="discord">More Info</button>
                     </div>
+
+                    <div class="mainText">
+                        <h2><a href="https://github.com/CalebEng/Zeppelin" target="_blank" rel="noopener">3D Graphics Project</a></h2>
+                        <h3>Computer Graphics | Fall 2023</h3>
+                        <button class="expandBut" data-project="zeppelin">More Info</button>
+                    </div>
                 </div>
             </div>
             <div class="projectsContainer">
@@ -112,6 +118,48 @@
                                 <br>
                                 Using the hangman command will start a game of hangman using a list of 57,521 possible words.
                                 <img src="../images/hangman.png" alt="">
+                            </p>
+                        </div>
+                        <div class="projectInfo hidden" data-project="zeppelin">
+                            <h3>Overview</h3>
+                            <hr>
+                            <p>
+                                This C++ application showcases a 3D zeppelin simulation built using OpenGL and supporting libraries. 
+                                This blimp is freely pilotable in all directions with a third person view by default. 
+                                A computer controlled opponent roams the space and will open fire when you enter its attack radius.
+                                Switching to first person view transforms the camera into a cockpit style perspective, 
+                                complete with a targeting reticle that lets you aim and fire back at the enemy.
+                            </p>
+
+                            <h3>Implementation Details</h3>
+                            <hr>
+                            <p>
+                                A demo video is available here: <a href="https://www.youtube.com/watch?v=5KTGa-xQKzM" target="_blank" rel="noopener">Demo test</a>
+                            </p>
+                            <p>
+                                The blimps were made with simple OpenGL shapes, and are drawn using the following matrix math:
+                            </p>
+                            <p>
+                                glPushMatrix() [saves the current transformation matrix]-> glTranslatef(x,y,z) [applies translation movement]-> glRoatef(angle,x,y,z) 
+                                [applies rotation around a specified axis]-> glScalef(x,y,z) [applies scaling]-> 
+                                specific shape is drawn and then modified be the prior function calls -> glPopMatrix() [restores the previous transformation matrix]
+                            </p>
+
+                            <p>
+                                Camera movement:
+                            </p>
+                            <p>
+                                The cameras position is calculated using spherical coordinates that are defined by a radius and two angles.
+                                These are then converted into Cartesian coordinates. This helps the camera orbit smoothly around the blimp in third person and allows for smooth aim in first person.
+                                <br><br>
+                                The conversion follows this formula: <br><br>
+                                    camZ = radius * cos(t_thi) * cos(t_theta);<br>
+				                    camX = radius * cos(t_thi) * sin(t_theta);<br>
+				                    camY = radius * sin(t_thi);<br>
+
+                            <br><br>
+                            These angles are then capped to -89 < t_thi * 180 / 3.1415 < 89 in third person and -89 < t_thi * 180 / 3.1415 <= 44 <br>
+                            If the new proposed angle is out of bounds they are then stopped to prevent unnatural flipping. 
                             </p>
                         </div>
                     </div>
