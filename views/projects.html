@@ -29,8 +29,14 @@
 
                     <div class="mainText">
                         <h2><a href="https://github.com/CalebEng/Zeppelin" target="_blank" rel="noopener">3D Graphics Project</a></h2>
-                        <h3>Computer Graphics | Fall 2023</h3>
+                        <h3>CPS-511 (Computer Graphics) | Fall 2023</h3>
                         <button class="expandBut" data-project="zeppelin">More Info</button>
+                    </div>
+
+                    <div class="mainText">
+                        <h2><a href="https://github.com/CalebEng/E-Commerce-Website" target="_blank" rel="noopener">E-Commerce Website</a></h2>
+                        <h3>CPS-630 (Web Applications) | Winter 2025</h3>
+                        <button class="expandBut" data-project="ecommerce">More Info</button>
                     </div>
                 </div>
             </div>
@@ -158,9 +164,74 @@
 				                    camY = radius * sin(t_thi);<br>
 
                             <br><br>
-                            These angles are then capped to -89 < t_thi * 180 / 3.1415 < 89 in third person and -89 < t_thi * 180 / 3.1415 <= 44 <br>
-                            If the new proposed angle is out of bounds they are then stopped to prevent unnatural flipping. 
+                            These angles are then capped to -89 < t_thi * 180 / 3.1415 < 89 in third person and -89 < t_thi * 180 / 3.1415 <= 44 for first person<br>
+                            If the new proposed angle is out of bounds it is then capped to prevent unnatural flipping. 
                             </p>
+                        </div>
+                        <div id = "imgModal" class = "modal">
+                            <span class = "close" onclick="closeModal()">&times;</span>
+                            <img class = "modal-content" id = "modalImg" alt ="">
+                        </div>
+                        <div class="projectInfo hidden" data-project="ecommerce">
+                            <h3>Overview</h3>
+                            <hr>
+                            <p>
+                                In this project, my group and I developed an E-Commerce website using a SPA approach. This website allowed users to make accounts, 
+                                order items, leave reviews, and ship orders. The front end was programmed with HTML, CSS, and JavaScript. 
+                                The backend was programmed in PHP, and mySQL was used for the database. 
+                                <br><br>For this project I was responsible for the following: 
+                                <br>
+                                SPA architecture, home page, shopping page, reviews, and the database schema. 
+                            </p>
+                            <br>
+                            
+                            <h3>Home Page</h3>
+                            <hr>
+                            <img src="../images/home.png" alt="" class="ecommerce-img">
+
+                            <br>
+                            <h3>Shopping Page</h3>
+                            <hr>
+                            <img src="../images/shopping.png" alt="" class="ecommerce-img">
+                            <p>
+                                On the shopping page, users can search for products by entering keywords into the search bar. 
+                                This search is handled entirely on the client side. It filters the items already displayed on the page without querying the database. 
+                                Products that do not match the search term are hidden from view, allowing users to quickly locate relevant items. <br><br>
+
+                                To access shopping features such as adding items to the cart, users must be logged in. If a user attempts to interact with these features without being authenticated, 
+                                they are redirected to the login or signup page.<br><br>
+                                Adding items to the cart is done via a drag-and-drop interface. 
+                                Users drag the desired product into the shopping cart tab, which sends a request to the backend to retrieve the current state of the user's cart. 
+                                If the item already exists in the cart, its quantity is incremented by one. If not, the system attempts to add the item.<br><br>
+                                
+                                The backend will respond with a JSON object indicated the result:<br>
+                                {success: true, "message": "Item added to cart successfully!"} <br>or<br> {success: false,"message": "Failed to add item to cart."}
+                                <br><br>
+
+                                Upon clicking the view reviews button, the user will be shown the reviews for the item and given the option of writing their own review (see below). 
+
+                            </p>
+
+                            <br>
+                            <h3>Reviews</h3>
+                            <hr>
+                            <img src="../images/reviews.png" alt="" class="ecommerce-img">
+                            <p>
+                            Once the request is made to the back end, the database will return the reviews for the item in JSON format along with a success flag. 
+                            If the item ID is missing from the request, a success => false is returned instead. 
+                            Upon success, the reviews are then stored in the current scope and looped through so they can be displayed on screen. 
+                            The reviews functionality is also used for the reviews of the company as well. In this case, the item ID in the request is set to 0, 
+                            which is reserved for company wide reviews and is not used by an actual product. These reviews can be made and accessed on the Types of Services page.
+                            </p>
+                            <br>
+                            <h3>Database schema</h3>
+                            <hr>
+                            <p>Click image to enlarge</p>
+                            <div class="image-container">
+                                <img src="../images/schema.png" alt="" class="ecommerce-img" id="schemaimg" onclick="openModal(this)">
+                            </div>
+
+
                         </div>
                     </div>
                     <div id = "test">

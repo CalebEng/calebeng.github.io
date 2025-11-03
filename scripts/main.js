@@ -69,6 +69,18 @@ function showSlides(n){
 }
 
 
+function openModal(img){
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    modal.style.display ="block"
+    modalImg.src = img.src;
+}
+
+function closeModal(){
+    document.getElementById("imgModal").style.display="none";
+}
+
+
 function setUpPage(){
     const buttons = document.querySelectorAll(".expandBut");
     const colContainer = document.getElementById("colContainer");
